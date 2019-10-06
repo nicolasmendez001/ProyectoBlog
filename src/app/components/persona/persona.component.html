@@ -1,0 +1,62 @@
+<div class="panel panel-primary">
+
+    <div class="panel-body">
+        <div class="panel-heading font-weight-bold ml-2 mb-2 text">
+            Lista de personas
+            <button type="button" class="btn btn-success" (click)="add()">
+                <i class="fas fa-plus"></i> Añadir
+            </button>
+        </div>
+        <table class="resultados table table-striped text-center">
+            <tr>
+                <th>
+                    #
+                </th>
+                <th>
+                    Nombres
+                </th>
+                <th>
+                    Apellidos
+                </th>
+                <th>
+                    Email
+                </th>
+                <th>
+                    Edad
+                </th>
+                <th>
+                    Genero
+                </th>
+                <th>
+                    Dirección
+                </th>
+                <th>
+                    Telefono
+                </th>
+                <th>
+                    Opciones
+                </th>
+                <th>
+                </th>
+            </tr>
+            <tr *ngFor="let row of personas; let indice=index">
+                <td>{{indice+1}}</td>
+                <td>{{row.nombre}}</td>
+                <td>{{row.apellido}}</td>
+                <td>{{row.email}}</td>
+                <td>{{row.edad}}</td>
+                <td>{{row.genero}}</td>
+                <td>{{row.dirrecion}}</td>
+                <td>{{row.telefono}}</td>
+                <td>
+                    <button type="button" class="btn btn-success" (click)="edit(row)">
+                        <i class="fas fa-edit"></i>
+                    </button>
+                    <button type="button" class="btn btn-danger" (click)="delete(row)">
+                        <i class="fas fa-trash-alt"></i>
+                    </button>
+                </td>
+            </tr>
+        </table>
+        <br />
+    </div>

@@ -1,0 +1,54 @@
+<div class="panel panel-primary">
+
+    <div class="panel-body">
+        <div class="panel-heading font-weight-bold ml-2 mb-2 text">
+            Lista de Comentarios
+            <button type="button" class="btn btn-success" (click)="add()">
+                <i class="fas fa-plus"></i> Añadir
+            </button>
+        </div>
+        <table class="resultados table table-striped text-center">
+            <tr>
+                <th>
+                    #
+                </th>
+                <th>
+                    Persona
+                </th>
+                <th>
+                    Fecha
+                </th>
+                <th>
+                    Texto
+                </th>
+                <th>
+                    ver comentarios
+                </th>
+                <th>
+                    Opciones
+                </th>
+                <th>
+                </th>
+            </tr>
+            <tr *ngFor="let row of comentarios; let indice=index">
+                <td>{{indice+1}}</td>
+                <td>{{row.id_persona}}</td>
+                <td>{{row.fecha_comentario}}</td>
+                <td>{{row.texto}}</td>
+                <td>
+                    <button type="button" class="btn btn-warning" (click)="comentarios(row)">
+                        <i class="fas fa-eye"></i>
+                    </button>
+                </td>
+                <td>
+                    <button type="button" class="btn btn-success" (click)="edit(row)">
+                        <i class="fas fa-edit"></i>
+                    </button>
+                    <button type="button" class="btn btn-danger" (click)="delete(row)">
+                        <i class="fas fa-trash-alt"></i>
+                    </button>
+                </td>
+            </tr>
+        </table>
+        <br />
+    </div>

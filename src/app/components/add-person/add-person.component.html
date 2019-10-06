@@ -1,0 +1,50 @@
+<div class="container text-center">
+    <h2>Añadir persona</h2>
+    <div class="row">
+        <form [formGroup]="form" (ngSubmit)="onSubmit()" novalidate>
+
+            <div class="row text-center">
+                <div class="col-6">
+                    <input type="nombre" id="nombre" formControlName="nombre" placeholder="Ingrese su nombre *"
+                        required />
+                </div>
+                <div class="col-6">
+                    <input type="text" id="apellido" formControlName="apellido" placeholder="Ingrese su apellido *"
+                        required />
+                </div>
+            </div>
+
+            <div class="row text-center">
+                <div class="col-6">
+                    <input type="email" id="email" formControlName="email" placeholder="Ingrese su email *" required />
+                </div>
+                <div class="col-6">
+                    <input type="number" id="edad" formControlName="edad" placeholder="Edad *" required />
+                </div>
+            </div>
+            <div class="row text-center">
+                <div class="col-4 ">
+                    <select formControlName="genero">
+                        <option value="genero">Genero</option>
+                        <option value="masculino">Hombre</option>
+                        <option value="femenino">Mujer</option>
+                        <option value="otro">Otro</option>
+                    </select>
+                </div>
+                <div class="col-8 ">
+                    <input type="number" id="telefono" formControlName="telefono" placeholder="Telefono *" required />
+                </div>
+            </div>
+
+            <div class="row text-center">
+                    <input type="text" id="direccion" formControlName="dirrecion" placeholder="direccion *" required />
+            </div>
+
+
+            <input type="submit" class="btnRegister btn btn-warning" value="Guardad" />
+
+
+
+        </form>
+    </div>
+</div>

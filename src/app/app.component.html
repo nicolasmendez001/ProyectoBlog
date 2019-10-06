@@ -5,124 +5,40 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Document</title>
 </head>
 
 <body>
-  <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top" style="font-size: 200%">
-    <a class="navbar-brand" href="#">TODO BLOGS & MÁS</a>
-    <div class="navbar-nav ml-auto">
-      <button class="btn btn-outline-warning my-1 my-sm-1" type="submit" (click)="openRegister()">Registrarse</button>
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+    <a class="navbar-brand" routerLink = "">TODO BLOGS & MÁS</a>
+    <div class="navbar-nav ">
+      <ul class="navbar-nav">
+        <li class="nav-item">
+          <a class="nav-link" routerLink = "/personas">Personas</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" routerLink = "/blogs">Blogs</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" routerLink = "/publicaciones">Publicaciones</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" routerLink = "/comentarios">Comentarios</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" routerLink = "/consultas">Consultas</a>
+        </li>
+      </ul>
     </div>
-
   </nav>
 
-  <!-- Caruosel-->
-  <section id="carousel">
-    <div id="carouselHome" class="carousel slide" data-ride="carousel">
-      <ol class="carousel-indicators">
-        <li data-target="#carouselHome" data-slide-to="0" class="active"></li>
-        <li data-target="#carouselHome" data-slide-to="1"></li>
-        <li data-target="#carouselHome" data-slide-to="2"></li>
-      </ol>
-      <div class="carousel-inner">
-        <div class="carousel-item active">
-          <img class="d-block w-100" src="https://cdn.pixabay.com/photo/2015/07/17/22/43/student-849825_960_720.jpg"
-            alt="First slide">
-          <div class="carousel-caption d-none d-md-block">
-            <h3>Demuestra tu talento en DESINGMATCH</h3>
-            <p>Eres importante para nosotros</p>
-          </div>
-        </div>
-        <div class="carousel-item">
-          <img class="d-block w-100" src="https://cdn.pixabay.com/photo/2018/03/01/09/33/hand-3190204_960_720.jpg"
-            alt="Second slide">
-          <div class="carousel-caption d-none d-md-block">
-            <h3>Demuestra tu talento en DESINGMATCH</h3>
-            <p>Eres importante para nosotros</p>
-          </div>
-        </div>
-        <div class="carousel-item">
-          <img class="d-block w-100" src="https://cdn.pixabay.com/photo/2016/11/29/06/15/plans-1867745_960_720.jpg"
-            alt="Third slide">
-          <div class="carousel-caption d-none d-md-block">
-            <h3>Demuestra tu talento en DESINGMATCH</h3>
-            <p>Eres importante para nosotros</p>
-          </div>
-        </div>
-      </div>
-      <a class="carousel-control-prev" href="#carouselHome" role="button" data-slide="prev">
-        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-        <span class="sr-only">Anterior</span>
-      </a>
-      <a class="carousel-control-next" href="#carouselHome" role="button" data-slide="next">
-        <span class="carousel-control-next-icon" aria-hidden="true"></span>
-        <span class="sr-only">Siguiente</span>
-      </a>
-    </div>
-  </section>
-  <br>
-  <section id="empresa">
-    <div class="contenido-section">
-      <div class="container">
-        <h2>Acerca de TODO BLOGS & MÁS</h2>
-        <p class="lead">Conoce más sobre nosotros, como trabajamos y como hacer parte de esta gran familia...
-        </p>
-        <div class="row">
-          <div class="col">
-            <div class="card-group">
-              <div class="card">
-                <div class="card-body">
-                  <h4 class="card-title text-center">¿Quienes somos?</h4>
-                  <h6 class="card-subtitle">Todo sobre nosotros</h6>
-                </div>
-                <img class="card-img-top"
-                  src="https://cdn.pixabay.com/photo/2015/11/19/21/11/knowledge-1052014_960_720.jpg" width="200px"
-                  height="200px">
-                <div class="card-body">
-                  <p class="card-text">Somos una empresa Colombiana, enfocada y orientada en generar
-                    lazos de contacto más cercano personas de todo el mundo.
-                  </p>
-                </div>
-              </div>
-              <div class="card">
-                <div class="card-body">
-                  <h4 class="card-title text-center">Acercandonos</h4>
-                  <h6 class="card-subtitle">Mas cerca de las comunidades</h6>
-                </div>
-                <img class="card-img-top" src="https://cdn.pixabay.com/photo/2017/04/23/19/30/earth-2254769_960_720.jpg"
-                  width="200px" height="200px">
-                <div class="card-body">
-                  <p class="card-text">¿Alguna vez has pensado en un lugar donde puedas encontrar
-                    temas importantes y de tu interes, donde te puedas conectar?
-                  </p>
-                </div>
-              </div>
-              <div class="card">
-                <div class="card-body">
-                  <h4 class="card-title text-center">¿Como paticipar?</h4>
-                  <h6 class="card-subtitle">Todo desde la comodidad del hogar</h6>
-                </div>
-                <img class="card-img-top"
-                  src="https://cdn.pixabay.com/photo/2016/03/09/09/17/computer-1245714_960_720.jpg" width="200px"
-                  height="200px">
-                <div class="card-body">
-                  <p class="card-text">Aquí podras publicar todo acerca de los temas de tu interes y agrado, comentar
-                    otras publicaciones de usuarios de todo el mundo. </p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
+  <div class="content">
+      <router-outlet></router-outlet>
+  </div>
 
   <!-- Footer -->
   <footer class="bg-dark text-light final fixed-bottom">
-    <div class="footer-copyright text-center py-3">© 2019 Copyright: DESINGMATCH
+    <div class="footer-copyright text-center py-3">© 2019 Copyright: Angel Mendez - Felipe Gonzalez
     </div>
   </footer>
 </body>
-
 </html>
