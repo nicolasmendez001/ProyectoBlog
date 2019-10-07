@@ -33,7 +33,8 @@ export class AddPublicacionComponent implements OnInit {
         id_persona: data.id_persona,
         publicaciones: data.publicaciones,
         fecha_publicacion: data.fecha_publicacion,
-        id_publicacion: data.id_publicacion
+        id_publicacion: data.id_publicacion,
+        calificacion: data.calificacion
       }
     );
   }
@@ -46,7 +47,8 @@ export class AddPublicacionComponent implements OnInit {
         id_persona: new FormControl(),
         publicaciones: new FormControl(),
         fecha_publicacion: this.getDate(),
-        id_publicacion: this.generateId()
+        id_publicacion: this.generateId(),
+        calificacion: new FormControl()
       }
     );
   }
