@@ -67,9 +67,7 @@ export class BlogComponent implements OnInit {
    * delete
    */
   public delete(row: any) {
-    console.log("A eliminar: ", row);
-    alert(row.id_blog);
-    this.service.delete(`{id_blog: ${row.id_blog}}`, "personas").subscribe(
+    this.service.delete("blogs", row.id_blog).subscribe(
       res => {
         this.respu = res;
         alert(this.respu.message);
@@ -78,5 +76,4 @@ export class BlogComponent implements OnInit {
       error => alert("Error")
     );
   }
-
 }

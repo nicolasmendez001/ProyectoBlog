@@ -1,1 +1,91 @@
-<p>consulta works!</p>
+<div class="container">
+
+    <div class="row">
+        1. Mostrar todas las personas que han comentado un blog.
+        <table class="resultados table table-striped text-center">
+            <tr>
+                <th>
+                    #
+                </th>
+                <th>
+                    Nombre
+                </th>
+            </tr>
+            <tr *ngFor="let row of primero; let indice=index">
+                <td>{{indice+1}}</td>
+                <td>{{row.nombre}}</td>
+            </tr>
+        </table>
+    </div>
+
+    <div class="row">
+        2. Mostrar todos los blogs de categorías tecnología y ciencia
+
+        <table class="resultados table table-striped text-center">
+            <tr>
+                <th>
+                    #
+                </th>
+                <th>
+                    Titulo blog
+                </th>
+            </tr>
+            <tr *ngFor="let row of segundo; let indice=index">
+                <td>{{indice+1}}</td>
+                <td>{{row.titulo}}</td>
+            </tr>
+        </table>
+
+    </div>
+
+    <div class="row">
+        3. Mostar la cantidad de blogs que ha escrito cada persona.
+        <table class="resultados table table-striped text-center">
+            <tr>
+                <th>
+                    #
+                </th>
+                <th>
+                    nombre
+                </th>
+
+                <th>
+                    cantidad
+                </th>
+            </tr>
+            <tr *ngFor="let row of tercero; let indice=index">
+                <td>{{indice+1}}</td>
+                <td>{{row._id}}</td>
+                <td>{{row.total}}</td>
+            </tr>
+        </table>
+    </div>
+
+    <div class="row">
+        4. promedio de calificaciones que obtenido en publicaciones cada persona.
+
+    </div>
+
+    <div class="row">
+        5. Mostrar las publicaciones que tienen más de 5 respuestas
+        <table class="resultados table table-striped text-center">
+            <tr>
+                <th>
+                    #
+                </th>
+                <th>
+                    Publicación
+                </th>
+
+                <th>
+                    cantidad
+                </th>
+            </tr>
+            <tr *ngFor="let row of quinto; let indice=index">
+                <td>{{indice+1}}</td>
+                <td>{{row._id}}</td>
+                <td>{{row.count}}</td>
+            </tr>
+        </table>
+    </div>
+</div>

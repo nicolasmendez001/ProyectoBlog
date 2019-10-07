@@ -58,7 +58,7 @@ export class PersonaComponent implements OnInit {
   public delete(row: any) {
     console.log("A eliminar: ", row);
     alert(row.id_persona);
-    this.service.delete(`{id_persona: ${row.id_persona}}`, "personas").subscribe(
+    this.service.delete("personas", row.id_persona).subscribe(
       res => {
         this.respu = res;
         alert(this.respu.message);

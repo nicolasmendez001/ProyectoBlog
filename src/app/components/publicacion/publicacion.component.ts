@@ -53,9 +53,7 @@ export class PublicacionComponent implements OnInit {
    * delete
    */
   public delete(row: any) {
-    console.log("A eliminar: ", row);
-    alert(row.id_blog);
-    this.service.delete(`{id_blog: ${row.id_blog}}`, "personas").subscribe(
+    this.service.delete("publicaciones", row.id_publicacion).subscribe(
       res => {
         this.respu = res;
         alert(this.respu.message);
@@ -64,5 +62,4 @@ export class PublicacionComponent implements OnInit {
       error => alert("Error")
     );
   }
-
 }

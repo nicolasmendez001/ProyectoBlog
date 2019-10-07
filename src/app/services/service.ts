@@ -6,8 +6,11 @@ import { HttpClient } from '@angular/common/http';
 })
 export class Service {
 
-
   constructor(private http: HttpClient) { }
+
+  getConsult(data:String): any {
+    return this.http.get<any>(`http://localhost:3000/${data}`);
+  }
 
   //Get data persons
   public getData(collecction: String): any {
@@ -15,7 +18,7 @@ export class Service {
   }
 
   getOnlyData(id: any, collecction: string) {
-    return this.http.get<any>(`http://localhost:3000/${collecction}/${id}}`);
+    return this.http.get<any>(`http://localhost:3000/${collecction}/${id}`);
   }
 
 
@@ -29,9 +32,8 @@ export class Service {
   /**
    * deletePerson
    */
-  public delete(data: any, collecction: String) {
-    console.log("Service delete: ", data);
-    return this.http.delete<String>(`http://localhost:3000/${collecction}`, data);
+  public delete(collecction: String, id) {
+    return this.http.delete<String>(`http://localhost:3000/${collecction}/${id}`);
   }
 
   /**
